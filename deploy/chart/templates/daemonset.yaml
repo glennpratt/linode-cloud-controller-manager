@@ -172,7 +172,7 @@ spec:
             - --enable-token-health-checker={{ . }}
             {{- end }}
             {{- with .Values.nodeBalancerTags }}
-            - --nodebalancer-tags={{ join " " . }}
+            - --nodebalancer-tags={{ join "," . }}
             {{- end }}
             {{- if .Values.allowUnauthorizedMetrics }}
             - --authorization-always-allow-paths="/metrics"
